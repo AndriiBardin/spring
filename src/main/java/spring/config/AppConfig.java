@@ -21,6 +21,7 @@ import spring.model.User;
 public class AppConfig {
     private final Environment env;
 
+    @Autowired
     public AppConfig(Environment env) {
         this.env = env;
     }
