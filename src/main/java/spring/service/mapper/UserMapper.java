@@ -6,7 +6,6 @@ import spring.model.User;
 
 @Component
 public class UserMapper {
-
     public UserResponseDto convertUserToDto(User user) {
         UserResponseDto userResponseDto = new UserResponseDto();
         userResponseDto.setName(user.getName());
