@@ -23,4 +23,10 @@ public class UserServiceImpl implements UserService {
     public List<User> listUsers() {
         return userDao.listUsers();
     }
+
+    @Override
+    public User get(Long id) {
+        return userDao.getById(id)
+                .orElseThrow(() -> new RuntimeException("No user with such id " + id));
+    }
 }
