@@ -8,17 +8,10 @@ import spring.model.User;
 public class UserMapper {
     public UserResponseDto convertUserToDto(User user) {
         UserResponseDto userResponseDto = new UserResponseDto();
+        userResponseDto.setId(user.getId());
         userResponseDto.setName(user.getName());
         userResponseDto.setSurname(user.getSurname());
         userResponseDto.setEmail(user.getEmail());
         return userResponseDto;
-    }
-
-    public User convertToUser(UserResponseDto userResponseDto) {
-        User user = new User();
-        user.setName(userResponseDto.getName());
-        user.setSurname(userResponseDto.getSurname());
-        user.setEmail(userResponseDto.getEmail());
-        return user;
     }
 }
